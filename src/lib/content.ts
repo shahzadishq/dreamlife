@@ -14,6 +14,14 @@ export const CTA = {
   email: "mailto:info@dreamlifenow.de",
 } as const;
 
+// Trustmarkt case-study widget — the exact [trustmarkt] shortcode embed used on
+// the reference page (widget.trustmarkt.de embed render URL).
+export const TRUSTMARKT_EMBED =
+  "https://widget.trustmarkt.de/embed/v1/render/8MWNYgzwvjxYw9pX1J6x/ZKBaQmgP2Xbjv7OM1VWA";
+
+// "Bereits über 150+ Teilnehmer" social-proof strip (brand asset from reference).
+export const SOCIAL_PROOF_IMG = "/brand/social-proof.webp";
+
 export const NAV_LINKS = [
   { label: "Erfolgsgeschichten", href: "#erfolgsgeschichten" },
   { label: "Über uns", href: "#ueber-uns" },
@@ -224,6 +232,7 @@ export type Testimonial = {
   name: string;
   meta: string;
   link?: string;
+  image?: string; // real photo from the reference page, when available
 };
 
 export const TESTIMONIALS: Testimonial[] = [
@@ -232,6 +241,7 @@ export const TESTIMONIALS: Testimonial[] = [
       "Letzten Monat hatte ich meinen besten Monat – da habe ich über 20.000 € Umsatz gemacht, nebenberuflich.",
     name: "Jonathan Chavannes",
     meta: "28 Jahre",
+    image: "/brand/people/jonathan.webp",
   },
   {
     quote:
@@ -239,6 +249,7 @@ export const TESTIMONIALS: Testimonial[] = [
     name: "Irina Beier",
     meta: "23 Jahre",
     link: "https://www.instagram.com/irinaxmira",
+    image: "/brand/people/irina.webp",
   },
   {
     quote:
@@ -246,6 +257,7 @@ export const TESTIMONIALS: Testimonial[] = [
     name: "Ploy Boonmeeprasert",
     meta: "27 Jahre",
     link: "https://www.instagram.com/boonmee.marketing",
+    image: "/brand/people/ploy.webp",
   },
   {
     quote:
@@ -341,12 +353,12 @@ export const COACHES = {
   eyebrow: "Lerne unsere Coaches kennen",
   title: "Unsere Coaches & Experten",
   people: [
-    { name: "Nico", role: "Founder" },
-    { name: "Viktoria", role: "Co-Founder" },
-    { name: "Felix Huber", role: "Marketingexperte" },
-    { name: "Ploy", role: "Kundensupport" },
-    { name: "Irina Beier", role: "Kundensupport" },
-    { name: "Philipp", role: "Strategieberater" },
+    { name: "Nico", role: "Founder", image: "/brand/people/nico.webp" },
+    { name: "Viktoria", role: "Co-Founder", image: "/brand/people/viktoria.webp" },
+    { name: "Felix Huber", role: "Marketingexperte", image: "/brand/people/felix-huber.webp" },
+    { name: "Ploy", role: "Kundensupport", image: "/brand/people/ploy-coach.webp" },
+    { name: "Irina Beier", role: "Kundensupport", image: "/brand/people/irina.webp" },
+    { name: "Philipp", role: "Strategieberater", image: "/brand/people/philipp.webp" },
   ],
 };
 

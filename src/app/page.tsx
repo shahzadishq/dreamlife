@@ -7,6 +7,7 @@ import { Founder } from "@/components/sections/Founder";
 import { IncomeModel } from "@/components/sections/IncomeModel";
 import { Comparison } from "@/components/sections/Comparison";
 import { Testimonials } from "@/components/sections/Testimonials";
+import { Trustmarkt } from "@/components/sections/Trustmarkt";
 import { Eligibility } from "@/components/sections/Eligibility";
 import { Press } from "@/components/sections/Press";
 import { Coaches } from "@/components/sections/Coaches";
@@ -27,6 +28,7 @@ export default function Home() {
         <IncomeModel />
         <Comparison />
         <Testimonials />
+        <Trustmarkt />
         <Eligibility />
         <Press />
         <Coaches />

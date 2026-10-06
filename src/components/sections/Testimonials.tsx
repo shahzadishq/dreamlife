@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { TESTIMONIALS, TESTIMONIALS_META } from "@/lib/content";
 import { Section, SectionHeading } from "../ui/Section";
 import { Reveal } from "../ui/Reveal";
@@ -33,12 +34,24 @@ export function Testimonials() {
               {t.quote}
             </p>
             <div className="mt-6 flex items-center gap-3 border-t border-ink/5 pt-5">
-              <span
-                className="grid h-10 w-10 flex-none place-items-center rounded-full bg-gradient-to-br from-ink to-indigo-brand text-xs font-extrabold text-white"
-                aria-hidden
-              >
-                {initials(t.name)}
-              </span>
+              {t.image ? (
+                <span className="relative h-11 w-11 flex-none overflow-hidden rounded-full ring-2 ring-lime/30">
+                  <Image
+                    src={t.image}
+                    alt={t.name}
+                    fill
+                    sizes="44px"
+                    className="object-cover"
+                  />
+                </span>
+              ) : (
+                <span
+                  className="grid h-11 w-11 flex-none place-items-center rounded-full bg-gradient-to-br from-ink to-indigo-brand text-xs font-extrabold text-white"
+                  aria-hidden
+                >
+                  {initials(t.name)}
+                </span>
+              )}
               <div className="min-w-0">
                 <p className="truncate text-sm font-bold text-ink">{t.name}</p>
                 <p className="truncate text-xs text-slate-muted">{t.meta}</p>

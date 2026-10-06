@@ -1,15 +1,7 @@
+import Image from "next/image";
 import { COACHES } from "@/lib/content";
 import { Section, SectionHeading } from "../ui/Section";
 import { Reveal } from "../ui/Reveal";
-
-function initials(name: string) {
-  return name
-    .split(" ")
-    .map((w) => w[0])
-    .join("")
-    .slice(0, 2)
-    .toUpperCase();
-}
 
 export function Coaches() {
   return (
@@ -22,11 +14,14 @@ export function Coaches() {
             delay={(i % 6) * 60}
             className="group flex flex-col items-center gap-3 rounded-2xl border border-ink/[0.06] bg-white p-6 text-center shadow-card transition-all duration-300 ease-premium hover:-translate-y-1 hover:shadow-card-hover"
           >
-            <span
-              className="grid h-16 w-16 place-items-center rounded-full bg-gradient-to-br from-ink to-indigo-brand font-display text-lg font-black text-white ring-2 ring-lime/40 transition-transform duration-300 group-hover:scale-105"
-              aria-hidden
-            >
-              {initials(c.name)}
+            <span className="relative h-20 w-20 overflow-hidden rounded-full ring-2 ring-lime/40 ring-offset-2 ring-offset-white transition-transform duration-300 group-hover:scale-105">
+              <Image
+                src={c.image}
+                alt={`${c.name} – ${c.role}`}
+                fill
+                sizes="80px"
+                className="object-cover"
+              />
             </span>
             <div>
               <p className="font-display text-sm font-extrabold text-ink">

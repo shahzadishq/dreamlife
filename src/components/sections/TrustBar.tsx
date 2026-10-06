@@ -17,6 +17,13 @@ export function TrustBar() {
     >
       <div className="container-px py-8">
         <Reveal className="flex flex-col items-center gap-6">
+          <Image
+            src="/brand/social-proof.webp"
+            alt="Bereits über 150+ Teilnehmer haben das getestet und sind begeistert"
+            width={1536}
+            height={171}
+            className="h-auto w-full max-w-xl"
+          />
           <p className="text-center text-xs font-semibold uppercase tracking-[0.18em] text-slate-muted">
             Geprüft, ausgezeichnet &amp; vertrauenswürdig
           </p>

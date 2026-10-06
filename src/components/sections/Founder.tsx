@@ -3,7 +3,7 @@ import { FOUNDER } from "@/lib/content";
 import { Reveal } from "../ui/Reveal";
 import { Button } from "../ui/Button";
 import { CTA } from "@/lib/content";
-import heroImg from "../../../public/brand/hero-island.jpg";
+import founderImg from "../../../public/brand/founder.webp";
 
 export function Founder() {
   return (
@@ -14,18 +14,17 @@ export function Founder() {
       <div className="container-px grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
         {/* Image side */}
         <Reveal className="relative order-last lg:order-first">
-          <div className="relative aspect-[4/5] overflow-hidden rounded-3xl ring-1 ring-white/10 sm:aspect-[5/4] lg:aspect-[4/5]">
+          <div className="relative overflow-hidden rounded-3xl bg-white p-3 shadow-soft ring-1 ring-white/10 sm:p-4">
             <Image
-              src={heroImg}
-              alt="Ortsunabhängig arbeiten – Freiheit leben"
-              fill
+              src={founderImg}
+              alt="Nico und Viktoria – die Gründer von DreamLife Now"
+              placeholder="blur"
               sizes="(max-width: 1024px) 100vw, 50vw"
-              className="object-cover object-[55%_center] transition-transform duration-[1.2s] ease-premium hover:scale-105"
+              className="h-auto w-full rounded-2xl"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-ink/60 via-transparent to-transparent" />
           </div>
           {/* Floating stat card */}
-          <div className="absolute -bottom-5 left-5 right-5 rounded-2xl border border-white/10 bg-white/10 p-5 backdrop-blur-xl sm:left-auto sm:right-6 sm:max-w-[260px]">
+          <div className="absolute -bottom-5 left-5 right-5 rounded-2xl border border-white/10 bg-ink/85 p-5 backdrop-blur-xl sm:left-auto sm:right-6 sm:max-w-[260px]">
             <p className="font-display text-3xl font-black text-lime">6–8 Wochen</p>
             <p className="mt-1 text-sm text-white/75">
               bis zur Grundlage für deine Unabhängigkeit

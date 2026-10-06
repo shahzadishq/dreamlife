@@ -43,9 +43,31 @@ promises were invented or strengthened.
   secondary = the free video training (`dein.dreamlifenow.de/video/`).
 
 > Everything above is **verified** from the live reference page’s HTML/CSS and
-> assets. Where the original design used generated avatar imagery that could not
-> be reliably mapped to the correct person, testimonial/coach cards use clean
-> **monogram avatars** instead — to avoid misattributing a face to a name.
+> assets.
+
+**Real imagery from the reference (all pulled from dreamlifenow.de):**
+
+- **Team / coaches** — real headshots for all six (Nico, Viktoria, Felix Huber,
+  Ploy, Irina Beier, Philipp), mapped by the label shown next to each photo on
+  the reference. Stored in `public/brand/people/`.
+- **Testimonials** — real photos for the three review-card people the reference
+  shows with a portrait + Instagram link (Jonathan Chavannes, Irina Beier, Ploy
+  Boonmeeprasert), matched by each image’s `alt` text. The remaining quote cards
+  (whose subjects appear only as video case studies on the reference, with no
+  portrait) keep clean monogram avatars.
+- **Über Nico & Viktoria** uses the brand’s founder photo-collage (`artboard-9`).
+- **Hero/trust strip** uses the brand’s “Bereits über 150+ Teilnehmer” social-proof
+  graphic.
+- **Trustmarkt case studies** — the exact `[trustmarkt]` shortcode output is
+  embedded (`widget.trustmarkt.de/embed/...`). ⚠️ Trustmarkt licenses the widget
+  to a single domain and returns **HTTP 403** for any other referrer, so the live
+  widget only renders when the site is served from **dreamlifenow.de**. On the
+  GitHub Pages preview (or localhost) a graceful fallback card with a link to the
+  public case studies is shown instead. No action needed — it will render
+  automatically once deployed on the production domain.
+
+The 9 success-story people (Patreas, Felix, Sara, …) are **video embeds** on the
+reference with no still portrait, so those cards remain text-only.
 
 ---
 
