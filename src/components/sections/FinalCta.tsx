@@ -51,7 +51,7 @@ export function FinalCta() {
                   href={FINAL_CTA.primaryCta.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group inline-flex items-center justify-center gap-2 rounded-full bg-lime px-8 py-4 text-base font-semibold text-ink shadow-glow transition-all duration-300 ease-premium hover:bg-indigo-brand hover:text-white hover:-translate-y-0.5"
+                  className="btn-cta group inline-flex items-center justify-center gap-2 rounded-full px-8 py-4 text-base font-semibold"
                 >
                   {FINAL_CTA.primaryCta.label}
                   <ArrowRight className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />

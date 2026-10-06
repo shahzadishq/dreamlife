@@ -55,7 +55,7 @@ export function Trustmarkt() {
       />
 
       {canEmbed ? (
-        <Reveal className="mx-auto mt-12 max-w-4xl overflow-hidden rounded-2xl border border-ink/[0.06] bg-cloud/40 shadow-card">
+        <Reveal className="mx-auto mt-12 max-w-4xl overflow-hidden rounded-[15px] border border-ink/[0.06] bg-cloud/40 shadow-card">
           <iframe
             src={TRUSTMARKT_EMBED}
             title="Trustmarkt Fallstudien und Bewertungen"
@@ -65,7 +65,7 @@ export function Trustmarkt() {
           />
         </Reveal>
       ) : (
-        <Reveal className="mx-auto mt-12 flex max-w-2xl flex-col items-center gap-5 rounded-2xl border border-ink/[0.06] bg-cloud/50 p-10 text-center shadow-card">
+        <Reveal className="mx-auto mt-12 flex max-w-2xl flex-col items-center gap-5 rounded-[15px] border border-ink/[0.06] bg-cloud/50 p-10 text-center shadow-card">
           <span className="grid h-14 w-14 place-items-center rounded-2xl bg-lime/15 text-lime-600 ring-1 ring-lime/30">
             <Shield className="h-7 w-7" />
           </span>

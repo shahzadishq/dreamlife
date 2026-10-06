@@ -5,7 +5,7 @@ import { Check, Clock, MapPin } from "../ui/Icons";
 
 export function Comparison() {
   return (
-    <Section id="vergleich" tone="white">
+    <Section id="vergleich" tone="white" dots>
       <SectionHeading
         eyebrow={COMPARISON.eyebrow}
         title={COMPARISON.title}

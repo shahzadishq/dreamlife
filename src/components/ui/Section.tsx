@@ -5,11 +5,14 @@ export function Section({
   children,
   className = "",
   tone = "white",
+  dots = false,
 }: {
   id?: string;
   children: React.ReactNode;
   className?: string;
   tone?: "white" | "cloud" | "ink" | "tint";
+  /** render a dotted-grid background + soft floating orbs */
+  dots?: boolean;
 }) {
   const tones = {
     white: "bg-white",
@@ -20,8 +23,17 @@ export function Section({
   return (
     <section
       id={id}
-      className={`scroll-mt-24 py-[var(--section-y)] ${tones[tone]} ${className}`}
+      className={`scroll-mt-24 py-[var(--section-y)] ${tones[tone]} ${
+        dots ? "relative isolate overflow-hidden" : ""
+      } ${className}`}
     >
+      {dots && (
+        <div className="pointer-events-none absolute inset-0 -z-10" aria-hidden>
+          <span className="dot-grid" />
+          <span className="absolute -left-32 -top-28 h-96 w-96 rounded-full bg-sky/15 blur-[90px] motion-safe:animate-drift" />
+          <span className="absolute -bottom-32 -right-24 h-96 w-96 rounded-full bg-indigo-brand/10 blur-[100px] motion-safe:animate-drift [animation-delay:-6s]" />
+        </div>
+      )}
       <div className="container-px">{children}</div>
     </section>
   );

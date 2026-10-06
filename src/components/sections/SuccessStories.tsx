@@ -33,7 +33,7 @@ export function SuccessStories() {
       <SectionHeading eyebrow={STORIES_META.eyebrow} title={STORIES_META.title} />
 
       {/* Featured story */}
-      <Reveal className="mt-14 overflow-hidden rounded-3xl border border-ink/[0.06] bg-cloud/50 shadow-card lg:grid lg:grid-cols-2">
+      <Reveal className="mt-14 overflow-hidden rounded-[15px] border border-ink/[0.06] bg-cloud/50 shadow-card lg:grid lg:grid-cols-2">
         <button
           type="button"
           onClick={() => setActive(featured)}
@@ -89,7 +89,7 @@ export function SuccessStories() {
               type="button"
               onClick={() => setActive(s)}
               aria-label={`Video von ${s.name} abspielen`}
-              className="group block w-full overflow-hidden rounded-2xl border border-ink/[0.06] bg-white text-left shadow-card transition-all duration-300 ease-premium hover:-translate-y-1 hover:shadow-card-hover"
+              className="group block w-full overflow-hidden rounded-[15px] border border-ink/[0.06] bg-white text-left shadow-card transition-all duration-300 ease-premium hover:-translate-y-1 hover:shadow-card-hover"
             >
               <span className="relative block aspect-video overflow-hidden">
                 <Image

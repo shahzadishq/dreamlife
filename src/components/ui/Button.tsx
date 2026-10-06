@@ -8,10 +8,8 @@ const base =
   "group inline-flex items-center justify-center gap-2 rounded-full font-semibold tracking-tight transition-all duration-300 ease-premium focus-visible:outline-none disabled:opacity-60";
 
 const variants: Record<Variant, string> = {
-  primary:
-    "bg-ink text-white shadow-soft hover:bg-indigo-brand hover:shadow-card-hover hover:-translate-y-0.5 active:translate-y-0",
-  secondary:
-    "bg-lime text-ink shadow-glow hover:bg-indigo-brand hover:text-white hover:-translate-y-0.5 active:translate-y-0",
+  primary: "btn-cta active:translate-y-0",
+  secondary: "btn-cta active:translate-y-0",
   ghost:
     "bg-transparent text-ink ring-1 ring-ink/15 hover:ring-ink/40 hover:bg-ink/[0.03]",
   light:

@@ -34,15 +34,17 @@ function FaqItem({
           aria-controls={`faq-panel-${index}`}
           id={`faq-button-${index}`}
           className={`flex w-full items-center justify-between gap-4 px-6 py-5 text-left transition-colors duration-300 ${
-            open ? "bg-sky" : "hover:bg-sky"
+            open
+              ? "bg-gradient-to-l from-sky to-[#1668a3] text-white"
+              : "text-ink hover:bg-gradient-to-l hover:from-sky hover:to-[#1668a3] hover:text-white"
           }`}
         >
-          <span className="font-display text-base font-extrabold text-ink sm:text-lg">
+          <span className="font-display text-base font-extrabold sm:text-lg">
             {q}
           </span>
           <span
             className={`grid h-8 w-8 flex-none place-items-center rounded-full transition-all duration-300 ease-premium ${
-              open ? "rotate-45 bg-white text-ink" : "bg-ink/[0.06] text-ink"
+              open ? "rotate-45 bg-white text-sky" : "bg-ink/[0.06] text-ink"
             }`}
             aria-hidden
           >
