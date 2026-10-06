@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { TESTIMONIALS, TESTIMONIALS_META } from "@/lib/content";
+import { asset } from "@/lib/asset";
 import { Section, SectionHeading } from "../ui/Section";
 import { Reveal } from "../ui/Reveal";
 import { Button } from "../ui/Button";
@@ -37,7 +38,7 @@ export function Testimonials() {
               {t.image ? (
                 <span className="relative h-11 w-11 flex-none overflow-hidden rounded-full ring-2 ring-lime/30">
                   <Image
-                    src={t.image}
+                    src={asset(t.image)}
                     alt={t.name}
                     fill
                     sizes="44px"

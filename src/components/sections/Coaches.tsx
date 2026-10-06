@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { COACHES } from "@/lib/content";
+import { asset } from "@/lib/asset";
 import { Section, SectionHeading } from "../ui/Section";
 import { Reveal } from "../ui/Reveal";
 
@@ -16,7 +17,7 @@ export function Coaches() {
           >
             <span className="relative h-20 w-20 overflow-hidden rounded-full ring-2 ring-lime/40 ring-offset-2 ring-offset-white transition-transform duration-300 group-hover:scale-105">
               <Image
-                src={c.image}
+                src={asset(c.image)}
                 alt={`${c.name} – ${c.role}`}
                 fill
                 sizes="80px"

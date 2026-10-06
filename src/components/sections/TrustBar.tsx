@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { TRUST_BADGES } from "@/lib/content";
+import { asset } from "@/lib/asset";
 import { Reveal } from "../ui/Reveal";
 
 import trustpilot from "../../../public/brand/badge-trustpilot.jpeg";
@@ -18,7 +19,7 @@ export function TrustBar() {
       <div className="container-px py-8">
         <Reveal className="flex flex-col items-center gap-6">
           <Image
-            src="/brand/social-proof.webp"
+            src={asset("/brand/social-proof.webp")}
             alt="Bereits über 150+ Teilnehmer haben das getestet und sind begeistert"
             width={1536}
             height={171}
