@@ -6,13 +6,29 @@ export function Footer() {
   const year = new Date().getFullYear();
   return (
     <footer className="relative isolate overflow-hidden bg-ink text-white">
-      {/* Moving background circles */}
-      <div className="pointer-events-none absolute inset-0 -z-10" aria-hidden>
+      {/* Animated top sheen */}
+      <span
+        className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-sky to-transparent bg-[length:200%_100%] motion-safe:animate-shimmer"
+        aria-hidden
+      />
+      {/* Moving background: drifting blurred orbs + orbiting dots + rotating rings */}
+      <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden" aria-hidden>
         <span className="absolute -left-16 top-10 h-64 w-64 rounded-full bg-sky/15 blur-[90px] motion-safe:animate-drift" />
         <span className="absolute right-0 top-1/3 h-72 w-72 rounded-full bg-lime/10 blur-[100px] motion-safe:animate-drift [animation-delay:-6s]" />
         <span className="absolute bottom-0 left-1/3 h-56 w-56 rounded-full bg-indigo-brand/40 blur-[90px] motion-safe:animate-drift [animation-delay:-11s]" />
-        <span className="absolute -right-10 bottom-10 h-40 w-40 rounded-full border border-white/5 motion-safe:animate-float-slow" />
-        <span className="absolute left-10 top-1/2 h-24 w-24 rounded-full border border-white/5 motion-safe:animate-float-slow [animation-delay:-3s]" />
+
+        {/* Rotating concentric rings (right) */}
+        <span className="absolute -right-24 top-1/4 h-[460px] w-[460px] rounded-full border border-white/5 motion-safe:animate-spin-slow">
+          <span className="absolute left-1/2 top-0 h-2.5 w-2.5 -translate-x-1/2 rounded-full bg-sky/80 shadow-[0_0_14px_2px_rgba(90,200,250,0.5)]" />
+        </span>
+        <span className="absolute -right-10 top-[34%] h-72 w-72 rounded-full border border-white/5 motion-safe:animate-spin-slow [animation-duration:22s] [animation-direction:reverse]">
+          <span className="absolute left-1/2 top-0 h-2 w-2 -translate-x-1/2 rounded-full bg-lime/80 shadow-[0_0_14px_2px_rgba(169,221,101,0.4)]" />
+        </span>
+
+        {/* Orbiting dot (left) */}
+        <span className="absolute left-16 top-1/2 h-40 w-40 motion-safe:animate-spin-slow [animation-duration:18s]">
+          <span className="absolute left-1/2 top-0 h-1.5 w-1.5 -translate-x-1/2 rounded-full bg-white/50" />
+        </span>
       </div>
       <div className="container-px py-16">
         <div className="grid gap-12 lg:grid-cols-[1.4fr_1fr_1fr_1.2fr]">

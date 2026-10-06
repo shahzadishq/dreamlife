@@ -35,7 +35,7 @@ export function Founder() {
         {/* Text side */}
         <Reveal className="flex flex-col gap-6">
           <span className="eyebrow text-lime">
-            <span className="h-px w-6 bg-current opacity-60" aria-hidden />
+            <span className="h-1.5 w-1.5 rounded-full bg-current opacity-80" aria-hidden />
             {FOUNDER.eyebrow}
           </span>
           <h2 className="text-display-md text-white">{FOUNDER.title}</h2>

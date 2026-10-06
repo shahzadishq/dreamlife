@@ -2,6 +2,7 @@ import { ScrollProgress } from "@/components/ui/ScrollProgress";
 import { Header } from "@/components/sections/Header";
 import { Hero } from "@/components/sections/Hero";
 import { TrustBar } from "@/components/sections/TrustBar";
+import { StatsBand } from "@/components/sections/StatsBand";
 import { ValueProps } from "@/components/sections/ValueProps";
 import { SuccessStories } from "@/components/sections/SuccessStories";
 import { Founder } from "@/components/sections/Founder";
@@ -24,6 +25,7 @@ export default function Home() {
       <main id="hauptinhalt">
         <Hero />
         <TrustBar />
+        <StatsBand />
         <ValueProps />
         <SuccessStories />
         <Founder />

@@ -14,7 +14,7 @@ export function Press() {
       <div className="mt-14 grid gap-5 lg:grid-cols-12">
         {/* Lead article */}
         <Reveal className="lg:col-span-7">
-          <article className="group relative h-full overflow-hidden rounded-3xl border border-ink/[0.06] bg-white shadow-card transition-all duration-300 ease-premium hover:shadow-card-hover">
+          <article className="group relative h-full overflow-hidden rounded-[15px] border border-ink/[0.06] bg-white shadow-card transition-all duration-300 ease-premium hover:shadow-card-hover">
             <div className="relative aspect-[16/10] overflow-hidden">
               <Image
                 src={asset(lead.image)}
@@ -44,7 +44,7 @@ export function Press() {
         <div className="grid gap-5 lg:col-span-5">
           {rest.slice(0, 3).map((p, i) => (
             <Reveal key={p.headline} delay={i * 70}>
-              <article className="group flex items-center gap-4 overflow-hidden rounded-2xl border border-ink/[0.06] bg-white p-3 pr-5 shadow-card transition-all duration-300 ease-premium hover:-translate-y-0.5 hover:shadow-card-hover">
+              <article className="group flex items-center gap-4 overflow-hidden rounded-[15px] border border-ink/[0.06] bg-white p-3 pr-5 shadow-card transition-all duration-300 ease-premium hover:-translate-y-0.5 hover:shadow-card-hover">
                 <div className="relative h-20 w-28 flex-none overflow-hidden rounded-xl">
                   <Image
                     src={asset(p.image)}
@@ -70,7 +70,7 @@ export function Press() {
         {/* Remaining full-width-ish cards */}
         {rest.slice(3).map((p, i) => (
           <Reveal key={p.headline} delay={i * 70} className="lg:col-span-6">
-            <article className="group flex h-full items-center gap-4 overflow-hidden rounded-2xl border border-ink/[0.06] bg-white p-3 pr-6 shadow-card transition-all duration-300 ease-premium hover:-translate-y-0.5 hover:shadow-card-hover">
+            <article className="group flex h-full items-center gap-4 overflow-hidden rounded-[15px] border border-ink/[0.06] bg-white p-3 pr-6 shadow-card transition-all duration-300 ease-premium hover:-translate-y-0.5 hover:shadow-card-hover">
               <div className="relative h-24 w-32 flex-none overflow-hidden rounded-xl">
                 <Image
                   src={asset(p.image)}

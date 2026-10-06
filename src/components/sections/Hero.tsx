@@ -1,13 +1,30 @@
 "use client";
 
+import { useRef } from "react";
 import Image from "next/image";
-import { motion, useReducedMotion, type Variants } from "framer-motion";
+import {
+  motion,
+  useReducedMotion,
+  useScroll,
+  useTransform,
+  type Variants,
+} from "framer-motion";
 import heroImg from "../../../public/brand/hero-island.jpg";
 import { HERO } from "@/lib/content";
 import { ArrowRight, Check } from "../ui/Icons";
 
 export function Hero() {
   const reduce = useReducedMotion();
+  const sectionRef = useRef<HTMLElement | null>(null);
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ["start start", "end start"],
+  });
+  // Parallax: background drifts down slower than the page; content lifts gently.
+  const bgY = useTransform(scrollYProgress, [0, 1], ["0%", reduce ? "0%" : "22%"]);
+  const bgScale = useTransform(scrollYProgress, [0, 1], [1.08, reduce ? 1.08 : 1.18]);
+  const contentY = useTransform(scrollYProgress, [0, 1], ["0%", reduce ? "0%" : "-14%"]);
+  const contentOpacity = useTransform(scrollYProgress, [0, 0.8], [1, reduce ? 1 : 0.35]);
 
   const container: Variants = {
     hidden: {},
@@ -25,9 +42,12 @@ export function Hero() {
   };
 
   return (
-    <section className="relative isolate flex min-h-[100svh] items-center overflow-hidden bg-ink">
-      {/* Background image */}
-      <div className="absolute inset-0 -z-10">
+    <section
+      ref={sectionRef}
+      className="relative isolate flex min-h-[100svh] items-center overflow-hidden bg-ink"
+    >
+      {/* Background image (parallax) */}
+      <motion.div className="absolute inset-0 -z-10" style={{ y: bgY, scale: bgScale }}>
         <Image
           src={heroImg}
           alt="Tropischer Strand mit Palmen – ortsunabhängig arbeiten"
@@ -35,7 +55,7 @@ export function Hero() {
           priority
           sizes="100vw"
           placeholder="blur"
-          className="object-cover object-[60%_center] motion-safe:animate-[float-slow_18s_ease-in-out_infinite] scale-105"
+          className="object-cover object-[60%_center] motion-safe:animate-[float-slow_18s_ease-in-out_infinite]"
         />
         {/* Brand overlays for legibility + mood */}
         <div className="absolute inset-0 bg-gradient-to-br from-ink/92 via-ink/70 to-indigo-brand/50" />
@@ -48,13 +68,14 @@ export function Hero() {
           className="absolute -left-16 bottom-10 h-72 w-72 rounded-full bg-sky/20 blur-[110px]"
           aria-hidden
         />
-      </div>
+      </motion.div>
 
       <div className="container-px w-full pb-20 pt-32 sm:pt-36">
         <motion.div
           variants={container}
           initial="hidden"
           animate="show"
+          style={{ y: contentY, opacity: contentOpacity }}
           className="max-w-3xl"
         >
           <motion.span
@@ -131,7 +152,7 @@ export function Hero() {
               href={HERO.primaryCta.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="group inline-flex items-center justify-center gap-2 rounded-full bg-lime px-7 py-4 text-base font-semibold text-ink shadow-glow transition-all duration-300 ease-premium hover:bg-lime-300 hover:-translate-y-0.5"
+              className="group inline-flex items-center justify-center gap-2 rounded-full bg-lime px-7 py-4 text-base font-semibold text-ink shadow-glow transition-all duration-300 ease-premium hover:bg-indigo-brand hover:text-white hover:-translate-y-0.5"
             >
               {HERO.primaryCta.label}
               <ArrowRight className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />

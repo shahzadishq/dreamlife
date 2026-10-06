@@ -23,7 +23,7 @@ function FaqItem({
   return (
     <div
       className={`overflow-hidden rounded-2xl border transition-colors duration-300 ${
-        open ? "border-lime/50 bg-white shadow-card" : "border-ink/[0.08] bg-white"
+        open ? "border-sky bg-white shadow-card" : "border-ink/[0.08] bg-white"
       }`}
     >
       <h3>
@@ -33,14 +33,16 @@ function FaqItem({
           aria-expanded={open}
           aria-controls={`faq-panel-${index}`}
           id={`faq-button-${index}`}
-          className="flex w-full items-center justify-between gap-4 px-6 py-5 text-left"
+          className={`flex w-full items-center justify-between gap-4 px-6 py-5 text-left transition-colors duration-300 ${
+            open ? "bg-sky" : "hover:bg-sky"
+          }`}
         >
           <span className="font-display text-base font-extrabold text-ink sm:text-lg">
             {q}
           </span>
           <span
             className={`grid h-8 w-8 flex-none place-items-center rounded-full transition-all duration-300 ease-premium ${
-              open ? "rotate-45 bg-lime text-ink" : "bg-ink/[0.05] text-ink"
+              open ? "rotate-45 bg-white text-ink" : "bg-ink/[0.06] text-ink"
             }`}
             aria-hidden
           >

@@ -28,7 +28,7 @@ export function Testimonials() {
           <Reveal
             key={t.name + t.meta}
             delay={(i % 3) * 70}
-            className="break-inside-avoid rounded-2xl border border-ink/[0.06] bg-white p-7 shadow-card transition-all duration-300 ease-premium hover:-translate-y-1 hover:shadow-card-hover"
+            className="break-inside-avoid rounded-[15px] border border-ink/[0.06] bg-white p-7 shadow-card transition-all duration-300 ease-premium hover:-translate-y-1 hover:shadow-card-hover"
           >
             <Quote className="h-7 w-7 text-lime" />
             <p className="mt-4 text-[15px] leading-relaxed text-ink">

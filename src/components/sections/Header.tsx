@@ -60,7 +60,7 @@ export function Header() {
             href={HERO.primaryCta.href}
             target="_blank"
             rel="noopener noreferrer"
-            className="group inline-flex items-center gap-2 rounded-full bg-lime px-5 py-2.5 text-sm font-semibold text-ink shadow-glow transition-all duration-300 ease-premium hover:bg-lime-300 hover:-translate-y-0.5"
+            className="group inline-flex items-center gap-2 rounded-full bg-lime px-5 py-2.5 text-sm font-semibold text-ink shadow-glow transition-all duration-300 ease-premium hover:bg-indigo-brand hover:text-white hover:-translate-y-0.5"
           >
             {HERO.primaryCta.label}
             <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />

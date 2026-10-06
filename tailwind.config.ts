@@ -99,12 +99,22 @@ const config: Config = {
           "33%": { transform: "translate(24px, -22px) scale(1.06)" },
           "66%": { transform: "translate(-18px, 16px) scale(0.96)" },
         },
+        shimmer: {
+          "0%": { backgroundPosition: "-200% 0" },
+          "100%": { backgroundPosition: "200% 0" },
+        },
+        spin: {
+          "0%": { transform: "rotate(0deg)" },
+          "100%": { transform: "rotate(360deg)" },
+        },
       },
       animation: {
         "fade-up": "fade-up 0.7s cubic-bezier(0.22,1,0.36,1) both",
         "float-slow": "float-slow 7s ease-in-out infinite",
         marquee: "marquee 40s linear infinite",
         drift: "drift 18s ease-in-out infinite",
+        shimmer: "shimmer 7s linear infinite",
+        "spin-slow": "spin 30s linear infinite",
       },
     },
   },

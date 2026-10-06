@@ -13,7 +13,7 @@ export function Eligibility() {
         {/* Eligibility card */}
         <Reveal className="flex flex-col gap-6 rounded-3xl bg-white p-8 shadow-card sm:p-10">
           <span className="eyebrow">
-            <span className="h-px w-6 bg-current opacity-60" aria-hidden />
+            <span className="h-1.5 w-1.5 rounded-full bg-current opacity-80" aria-hidden />
             {ELIGIBILITY.eyebrow}
           </span>
           <h2 className="text-display-sm text-ink">{ELIGIBILITY.title}</h2>

@@ -38,7 +38,7 @@ export function NewsletterForm() {
       />
       <button
         type="submit"
-        className="group inline-flex items-center justify-center gap-2 rounded-full bg-lime px-5 py-3 text-sm font-semibold text-ink transition-all duration-300 ease-premium hover:bg-lime-300"
+        className="group inline-flex items-center justify-center gap-2 rounded-full bg-lime px-5 py-3 text-sm font-semibold text-ink transition-all duration-300 ease-premium hover:bg-indigo-brand hover:text-white"
       >
         Anmelden
         <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />

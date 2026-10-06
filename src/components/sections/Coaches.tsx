@@ -18,13 +18,14 @@ function PersonCard({
   return (
     <Reveal
       delay={delay}
-      className="group relative overflow-hidden rounded-3xl border border-ink/[0.06] bg-ink shadow-card transition-all duration-300 ease-premium hover:-translate-y-1.5 hover:shadow-card-hover"
+      className="group relative overflow-hidden rounded-3xl border border-ink/[0.06] bg-ink shadow-card ring-0 ring-sky/50 transition-all duration-300 ease-premium hover:-translate-y-1.5 hover:shadow-card-hover hover:ring-2"
     >
       <div className={`relative ${featured ? "aspect-[4/5]" : "aspect-[3/4]"}`}>
         <Image
           src={asset(p.image)}
           alt={`${p.name} – ${p.role}`}
           fill
+          loading="eager"
           sizes={featured ? "(max-width: 768px) 100vw, 420px" : "(max-width: 768px) 50vw, 300px"}
           className="object-cover object-top transition-transform duration-[900ms] ease-premium group-hover:scale-105"
         />

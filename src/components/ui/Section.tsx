@@ -55,7 +55,7 @@ export function SectionHeading({
         <span
           className={`eyebrow ${tone === "light" ? "text-lime" : ""}`}
         >
-          <span className="h-px w-6 bg-current opacity-60" aria-hidden />
+          <span className="h-1.5 w-1.5 rounded-full bg-current opacity-80" aria-hidden />
           {eyebrow}
         </span>
       )}
