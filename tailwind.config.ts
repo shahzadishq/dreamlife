@@ -94,11 +94,17 @@ const config: Config = {
           "0%": { transform: "translateX(0)" },
           "100%": { transform: "translateX(-50%)" },
         },
+        drift: {
+          "0%, 100%": { transform: "translate(0, 0) scale(1)" },
+          "33%": { transform: "translate(24px, -22px) scale(1.06)" },
+          "66%": { transform: "translate(-18px, 16px) scale(0.96)" },
+        },
       },
       animation: {
         "fade-up": "fade-up 0.7s cubic-bezier(0.22,1,0.36,1) both",
         "float-slow": "float-slow 7s ease-in-out infinite",
         marquee: "marquee 40s linear infinite",
+        drift: "drift 18s ease-in-out infinite",
       },
     },
   },

@@ -5,7 +5,15 @@ import { NewsletterForm } from "./NewsletterForm";
 export function Footer() {
   const year = new Date().getFullYear();
   return (
-    <footer className="bg-ink text-white">
+    <footer className="relative isolate overflow-hidden bg-ink text-white">
+      {/* Moving background circles */}
+      <div className="pointer-events-none absolute inset-0 -z-10" aria-hidden>
+        <span className="absolute -left-16 top-10 h-64 w-64 rounded-full bg-sky/15 blur-[90px] motion-safe:animate-drift" />
+        <span className="absolute right-0 top-1/3 h-72 w-72 rounded-full bg-lime/10 blur-[100px] motion-safe:animate-drift [animation-delay:-6s]" />
+        <span className="absolute bottom-0 left-1/3 h-56 w-56 rounded-full bg-indigo-brand/40 blur-[90px] motion-safe:animate-drift [animation-delay:-11s]" />
+        <span className="absolute -right-10 bottom-10 h-40 w-40 rounded-full border border-white/5 motion-safe:animate-float-slow" />
+        <span className="absolute left-10 top-1/2 h-24 w-24 rounded-full border border-white/5 motion-safe:animate-float-slow [animation-delay:-3s]" />
+      </div>
       <div className="container-px py-16">
         <div className="grid gap-12 lg:grid-cols-[1.4fr_1fr_1fr_1.2fr]">
           {/* Brand + newsletter */}

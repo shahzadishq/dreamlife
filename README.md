@@ -66,8 +66,22 @@ promises were invented or strengthened.
   public case studies is shown instead. No action needed — it will render
   automatically once deployed on the production domain.
 
-The 9 success-story people (Patreas, Felix, Sara, …) are **video embeds** on the
-reference with no still portrait, so those cards remain text-only.
+**Premium pass (v2):**
+
+- **Success stories** are now a video gallery — real reference YouTube videos
+  (mapped by each branded thumbnail's content), shown as a featured story + grid
+  with play buttons that open an accessible video **lightbox** (Esc / backdrop to
+  close, autoplay via youtube-nocookie).
+- **Team** redesigned as premium portrait cards (founders featured + team row)
+  instead of avatar circles.
+- **Presse** is an editorial, image-rich layout using the six real press-article
+  images, with a large lead story.
+- **Comparison** now reflects the attorney's ~50 % tax/levies (net ≈ 2.629 € vs.
+  the nomad's ≈ 5.258 €) and adds Freiheit / Netto / Zeitaufwand meter bars.
+- **Final CTA** gains an animated SVG growth chart on the right (illustrative),
+  echoing the reference's "Start your journey" graphic.
+- **Footer** has slow-drifting brand orbs; a brand scroll-progress bar sits at
+  the top of the page. All motion respects `prefers-reduced-motion`.
 
 ---
 

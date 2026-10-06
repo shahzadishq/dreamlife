@@ -103,53 +103,93 @@ export type Story = {
   name: string;
   role: string;
   body: string;
+  video: string; // YouTube id (real reference video)
+  thumb: string; // local poster from the reference video
+  headline: string; // the hook shown on the thumbnail
 };
 
+// Mapped from the reference's real success-story videos (verified by each
+// branded thumbnail's content). thumb = local copy of the YouTube poster.
 export const SUCCESS_STORIES: Story[] = [
-  {
-    name: "Patreas",
-    role: "Unternehmer & Quereinsteiger",
-    body: "Patreas arbeitete über 15 Jahre im Stahl- und Metallbereich und wollte aus seinem Alltag ausbrechen. Mit DreamLife verändert er sein Mindset, baut sein eigenes Business auf und ist heute bereit für seinen ersten Testkunden.",
-  },
-  {
-    name: "Felix",
-    role: "Geschäftsführer von Grüneich Media",
-    body: "Felix gründete mit DreamLife seine eigene Agentur. Heute hilft er Unternehmen mit Social Recruiting und Online-Marketing und setzt erfolgreiche Kampagnen für Kunden um.",
-  },
   {
     name: "Sara",
     role: "Volljuristin & Unternehmerin",
+    headline: "Sie wollte Richterin oder Anwältin werden",
     body: "Sara war Volljuristin und wollte endlich ortsunabhängig arbeiten. Durch DreamLife hat sie ein eigenes Business aufgebaut, mehr Freiheit gewonnen und entscheidet heute selbst, wann, wo und für wen sie arbeitet.",
-  },
-  {
-    name: "Jan",
-    role: "Unternehmer & Familienvater",
-    body: "Jan war Bauleiter und wollte mehr Zeit für seine Familie. Mit DreamLife baute er sich ein eigenes Business auf, gewann schnell seinen ersten Kunden und kann heute seinen Alltag freier gestalten.",
+    video: "mJR7VjXTV6A",
+    thumb: "/brand/video/mJR7VjXTV6A.jpg",
   },
   {
     name: "Kassandra",
     role: "Geschäftsführerin & Social-Media-Expertin",
+    headline: "70.000 € Umsatz im 1. Jahr",
     body: "Kassandra wurde mit DreamLife selbstständig, arbeitet remote und erzielte im ersten Jahr 70.000 € Umsatz. Der Support gab ihr dabei Sicherheit.",
+    video: "fjGXih9WHSA",
+    thumb: "/brand/video/fjGXih9WHSA.jpg",
   },
   {
-    name: "Kevin",
-    role: "Unternehmer & Auswanderer",
-    body: "Kevin arbeitete im Metallbau und wollte mehr Freiheit. Durch DreamLife lernt er Schritt für Schritt, sein eigenes Business aufzubauen und ortsunabhängiger zu werden, um mehr zu reisen.",
+    name: "Jan",
+    role: "Unternehmer & Familienvater",
+    headline: "Vom Bauingenieur ins Online-Business",
+    body: "Jan war Bauleiter und wollte mehr Zeit für seine Familie. Mit DreamLife baute er sich ein eigenes Business auf, gewann schnell seinen ersten Kunden und kann heute seinen Alltag freier gestalten.",
+    video: "e6eMzfVwjGU",
+    thumb: "/brand/video/e6eMzfVwjGU.jpg",
   },
   {
     name: "Irene",
     role: "Geschäftsleitung bei Mundi Recruiting",
+    headline: "Als Mama raus aus dem Hamsterrad",
     body: "Irene gewann mehr Zeit für ihre Kinder, Selbstvertrauen und finanzielle Freiheit. Ihr Jahresziel erreichte sie bereits nach drei Wochen.",
+    video: "wEe7M87yhv8",
+    thumb: "/brand/video/wEe7M87yhv8.jpg",
+  },
+  {
+    name: "Kevin",
+    role: "Unternehmer & Auswanderer",
+    headline: "Vom Handwerker zum Online-Business",
+    body: "Kevin arbeitete im Metallbau und wollte mehr Freiheit. Durch DreamLife lernt er Schritt für Schritt, sein eigenes Business aufzubauen und ortsunabhängiger zu werden, um mehr zu reisen.",
+    video: "rO8eX1r2FlM",
+    thumb: "/brand/video/rO8eX1r2FlM.jpg",
+  },
+  {
+    name: "Irina Beier",
+    role: "Unternehmerin & Reisende",
+    headline: "Mit 21 Ausbildung abgebrochen – heute selbstständig",
+    body: "Irina brach ihre Ausbildung ab und entschied sich bewusst für einen anderen Weg. Mit nur 21 Jahren baute sie ihr eigenes Business auf und reist heute durch Mexiko, Thailand und Südafrika.",
+    video: "ZDW1Gz-_va8",
+    thumb: "/brand/video/ZDW1Gz-_va8.jpg",
+  },
+  {
+    name: "Karim",
+    role: "Video Editor",
+    headline: "Vom Kellner zum Online-Einkommen",
+    body: "Karim war zuvor in der Gastronomie tätig und hatte keine klare berufliche Richtung. Durch DreamLife gewinnt er mehr Klarheit und baut Schritt für Schritt seine Vision im Bereich Video Editing auf.",
+    video: "q3qxvvBOWa8",
+    thumb: "/brand/video/q3qxvvBOWa8.jpg",
   },
   {
     name: "Joel",
     role: "Altenpfleger & Gründer",
+    headline: "Von Altenpflege zu Freiheit & eigenem Business",
     body: "Als Altenpfleger wollte Joel mehr Freiheit und ein eigenes Business. Mit Unterstützung gewann er seinen ersten Kunden und arbeitet heute an seinem Traum vom Leben in Thailand.",
+    video: "K4AXj5xs8Sw",
+    thumb: "/brand/video/K4AXj5xs8Sw.jpg",
   },
   {
-    name: "Martina",
-    role: "Wirtschaftsingenieurin",
-    body: "Martina ist alleinerziehende Mutter von zwei Kindern. Mit dem DreamLife-Mentoring baute sie ihr Online-Business auf, kündigte bereits nach 6 Monaten ihren Job und ist heute 100 % selbstständig.",
+    name: "Juliana",
+    role: "Traderin & Personal Brand",
+    headline: "Als Selbstständige skalieren",
+    body: "Juliana ist seit fünf Jahren selbstständig als Traderin. Mit DreamLife bringt sie ihre Personal Brand, Social Media und ihr Marketing auf das nächste Level und professionalisiert ihre Online-Präsenz.",
+    video: "eRMU9_A6XJo",
+    thumb: "/brand/video/eRMU9_A6XJo.jpg",
+  },
+  {
+    name: "Ploy",
+    role: "Recruiting & Kundensupport",
+    headline: "Von der Pflege zur eigenen Agentur",
+    body: "Ploy war Pflegefachkraft und ist Mutter von zwei Kindern. Heute arbeitet sie von zuhause, betreut Kunden und hat für Pflegeunternehmen hunderte Einstellungen generiert.",
+    video: "tHDseB6Y2Jw",
+    thumb: "/brand/video/tHDseB6Y2Jw.jpg",
   },
 ];
 
@@ -197,16 +237,23 @@ export const COMPARISON = {
   eyebrow: "Vergleich",
   title: "Mehr Freiheit bei gleichem Verdienst",
   intro:
-    "Ein Anwalt verdient durchschnittlich 5.258 € brutto im Monat und arbeitet dafür etwa 55 Stunden pro Woche – rund 247 Stunden monatlich (Quelle: Stepstone).",
+    "Ein Anwalt verdient durchschnittlich 5.258 € brutto im Monat und arbeitet dafür etwa 55 Stunden pro Woche – rund 247 Stunden monatlich (Quelle: Stepstone). Von diesem Bruttogehalt gehen in der Spitze rund 50 % für Steuern und Abgaben ab – es bleiben also ca. 2.629 € netto.",
   conclusion:
     "Um denselben Betrag zu erzielen, benötigst du als digitaler Nomade bei 80 % Gewinn einen Umsatz von 6.572,50 €. Das entspricht bei einem durchschnittlichen Kundenwert von 1.314 € genau fünf Kunden – und einem effektiven Aufwand von nur 15 Stunden pro Kunde im Monat.",
-  kicker: "Weniger Arbeit, mehr Freiheit – und ein Leben nach deinen Regeln.",
+  kicker: "Weniger Arbeit, mehr Netto, mehr Freiheit – und ein Leben nach deinen Regeln.",
+  // Freedom/effort meter (0–100) for the visual bars in the comparison cards.
+  meters: {
+    attorney: { time: 90, freedom: 25, net: 40 },
+    nomad: { time: 30, freedom: 100, net: 85 },
+  },
   columns: [
     {
       label: "Anwalt",
       tone: "muted" as const,
       rows: [
         { k: "Verdienst (brutto)", v: "≈ 5.258 € / Monat" },
+        { k: "Steuern & Abgaben", v: "≈ 50 %" },
+        { k: "Netto", v: "≈ 2.629 € / Monat" },
         { k: "Arbeitszeit", v: "≈ 247 Std. / Monat" },
         { k: "Ortsgebunden", v: "Kanzlei & Termine" },
         { k: "Flexibilität", v: "Gering" },
@@ -218,6 +265,8 @@ export const COMPARISON = {
       tone: "brand" as const,
       rows: [
         { k: "Umsatz", v: "≈ 6.572,50 € / Monat" },
+        { k: "Gewinnmarge", v: "≈ 80 %" },
+        { k: "Netto", v: "≈ 5.258 € / Monat" },
         { k: "Arbeitszeit", v: "≈ 15 Std. / Kunde" },
         { k: "Ortsunabhängig", v: "100 % remote" },
         { k: "Flexibilität", v: "Maximal" },
@@ -314,36 +363,44 @@ export const VERIFICATION = {
 export const PRESS = {
   eyebrow: "Presse",
   title: "DreamLife.now in den Medien",
+  intro:
+    "Unsere Methode und die Geschichten unserer Teilnehmer wurden in verschiedenen Online-Magazinen aufgegriffen.",
   items: [
     {
       outlet: "fair-news.de",
       headline:
         "Der große Auswander-Guide: So startest du mit DreamLife.now in dein neues, freies Leben",
+      image: "/brand/press/fair-news.webp",
     },
     {
       outlet: "newsfenster.de",
       headline:
         "Interview mit Nico und Viktoria von DreamLife.now: So entstand das Erfolgsmodell",
+      image: "/brand/press/newsfenster.webp",
     },
     {
       outlet: "artikel-auf-blogs.de",
       headline:
         "Wie junge Menschen mit DreamLife.now finanzielle und persönliche Freiheit erreichen",
+      image: "/brand/press/artikel-auf-blogs.webp",
     },
     {
       outlet: "business-presse.de",
       headline:
         "Interview mit Nico und Viktoria von DreamLife.now – So entstand das Erfolgsmodell",
+      image: "/brand/press/business-presse.webp",
     },
     {
       outlet: "newsnomade.de",
       headline:
         "Träume von Freiheit: ortsunabhängig arbeiten, Einkommen sichern, Alltag hinter sich lassen",
+      image: "/brand/press/newsnomade-1.webp",
     },
     {
       outlet: "newsnomade.de",
       headline:
         "Zwei Wege, ein Ziel: Wie Cedric und Cassandra mit DreamLife.now ihr Leben verändert haben",
+      image: "/brand/press/newsnomade-2.jpg",
     },
   ],
 };
