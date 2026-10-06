@@ -5,22 +5,26 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // DreamLife Now brand palette (extracted from dreamlifenow.de)
+        // DreamLife Now brand palette (extracted from dreamlifenow.de).
+        // Primary accent is the sky blue of the current logo swoosh (#5AC8FA).
+        // NOTE: the `lime` token name is kept for stability, but every shade now
+        // maps to the brand's sky-blue scale so existing utility classes
+        // (bg-lime / text-lime / ring-lime …) render in brand blue.
         lime: {
-          DEFAULT: "#A9DD65", // primary brand accent (logo swoosh)
-          50: "#f4fbe9",
-          100: "#e7f6cf",
-          200: "#d2eca4",
-          300: "#bce277",
-          400: "#a9dd65",
-          500: "#8cc63f",
-          600: "#6fa52e",
-          700: "#567f26",
-          800: "#456324",
-          900: "#3a5321",
+          DEFAULT: "#5AC8FA", // primary brand accent (logo swoosh)
+          50: "#eef9ff",
+          100: "#d9f1ff",
+          200: "#b6e5ff",
+          300: "#86d5fc",
+          400: "#5ac8fa",
+          500: "#2fb3f0",
+          600: "#1f93cf",
+          700: "#1668a3", // AA-contrast blue for text on white (eyebrows, links)
+          800: "#164f7a",
+          900: "#163f61",
         },
         sky: {
-          DEFAULT: "#5AC8FA", // secondary accent
+          DEFAULT: "#5AC8FA", // secondary accent (same brand blue)
           400: "#5ac8fa",
           500: "#2fb3f0",
           600: "#1f93cf",
@@ -68,7 +72,7 @@ const config: Config = {
         card: "0 1px 2px rgba(16,29,69,0.04), 0 12px 32px -12px rgba(16,29,69,0.12)",
         "card-hover": "0 2px 4px rgba(16,29,69,0.06), 0 24px 48px -16px rgba(16,29,69,0.22)",
         soft: "0 8px 30px -12px rgba(16,29,69,0.18)",
-        glow: "0 18px 50px -20px rgba(169,221,101,0.55)",
+        glow: "0 18px 50px -20px rgba(90,200,250,0.6)",
       },
       backgroundImage: {
         "grid-ink":

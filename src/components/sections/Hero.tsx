@@ -90,7 +90,7 @@ export function Hero() {
               >
                 <path
                   d="M3 11C60 4 180 3 297 8"
-                  stroke="#A9DD65"
+                  stroke="#5AC8FA"
                   strokeWidth="5"
                   strokeLinecap="round"
                 />

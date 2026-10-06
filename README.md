@@ -16,17 +16,22 @@ promises were invented or strengthened.
 
 | Token | Value | Usage |
 |-------|-------|-------|
-| **Brand green (accent)** | `#A9DD65` | Logo swoosh, primary accent, highlights, CTAs |
-| **Sky blue (secondary)** | `#5AC8FA` | Focus rings, secondary accents |
+| **Brand sky blue (accent)** | `#5AC8FA` | Logo swoosh, primary accent, highlights, CTAs |
 | **Ink / navy (dark)** | `#101D45` | Dark sections, headings, primary button |
 | **Deep indigo** | `#3B3664` | Gradient partner for the navy |
 | **Body gray** | `#4B5563` / `#6F7D91` | Paragraph + muted text |
 | **Cloud / surfaces** | `#ECEFF1` / `#F4F9FF` | Light section backgrounds |
 
-- **Logo:** handwritten script wordmark “Dreamlife.now” with a lime-green
-  swoosh. Original black version (`/public/brand/logo-dark.png`) was kept; a
-  **white variant** (`logo-white.png`) was generated for dark backgrounds
-  (header over the hero, footer).
+> The current DreamLife Now logo uses a **sky-blue swoosh** (`#5AC8FA`), and the
+> live reference site uses that blue as its primary accent — so the redesign is
+> built around brand blue. (An older green swoosh `#A9DD65` also exists in the
+> brand's history; it is not used here.) For stability the Tailwind accent token
+> is still named `lime`, but every shade maps to the sky-blue scale.
+
+- **Logo:** handwritten script wordmark “Dreamlife.now” with a sky-blue swoosh
+  (`/public/brand/logo-blue.png`, the current brand logo). A **white variant**
+  (`logo-white.png`, white script + blue swoosh) was generated for dark
+  backgrounds (header over the hero, footer).
 - **Typography:** `Nunito Sans` (display / headings, weights 800–900) + `Inter`
   (body / UI) — both from the original site, loaded via `next/font`.
 - **Imagery:** the original tropical-beach hero photo is reused

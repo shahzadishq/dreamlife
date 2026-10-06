@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
-import logoDark from "../../../public/brand/logo-dark.png";
+// Light-background logo = the real blue-swoosh wordmark from dreamlifenow.de.
+import logoDark from "../../../public/brand/logo-blue.png";
 import logoWhite from "../../../public/brand/logo-white.png";
 
 export function Logo({

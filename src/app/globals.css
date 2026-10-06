@@ -4,8 +4,8 @@
 
 :root {
   /* Design tokens (mirrors tailwind.config.ts for raw CSS use) */
-  --color-lime: #a9dd65;
-  --color-lime-600: #6fa52e;
+  --color-lime: #5ac8fa;
+  --color-lime-600: #1f93cf;
   --color-sky: #5ac8fa;
   --color-ink: #101d45;
   --color-indigo: #3b3664;
