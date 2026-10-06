@@ -140,7 +140,41 @@ framer-motion · next/font · next/image (sharp).
 
 ---
 
-## 6. Project structure
+## 6. Live preview via GitHub Pages
+
+A GitHub Actions workflow (`.github/workflows/deploy-pages.yml`) builds a static
+export and deploys it to GitHub Pages on every push to the default branch.
+
+**Preview URL (once enabled):** `https://shahzadishq.github.io/dreamlife/`
+
+### One-time setup (required — do this once in the repo UI)
+
+1. Open **Settings → Pages**.
+2. Under **Build and deployment → Source**, choose **GitHub Actions**.
+
+That's it. The next push (or a manual run via **Actions → “Deploy to GitHub
+Pages” → Run workflow**) builds and publishes the site; the deploy job prints
+the live URL. First deploys take a couple of minutes.
+
+### How the static build works
+
+- `GITHUB_PAGES=true` switches `next.config.mjs` to `output: "export"` (a fully
+  static site in `./out`) with `basePath`/`assetPrefix` set to `/<repo>` so all
+  assets resolve under the project subpath, and `images.unoptimized` (Pages has
+  no image-optimization server).
+- Local `npm run dev` / `npm start` are unaffected — the export settings only
+  apply when `GITHUB_PAGES=true`.
+- To reproduce the exact Pages build locally:
+  ```bash
+  GITHUB_PAGES=true PAGES_BASE_PATH=/dreamlife npm run build
+  npx serve out   # or any static server; note the /dreamlife base path
+  ```
+
+> Note: this is a static preview. Client-side motion, the FAQ accordion and the
+> mobile menu all work; the newsletter form still just opens the mail client.
+> The real CTAs continue to point at the live funnels.
+
+## 7. Project structure
 
 ```
 public/brand/            Logo variants, hero image, trust badges, favicon

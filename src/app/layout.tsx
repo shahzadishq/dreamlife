@@ -15,6 +15,9 @@ const nunito = Nunito_Sans({
   display: "swap",
 });
 
+// Prefix for static assets when deployed under a subpath (GitHub Pages).
+const bp = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+
 export const metadata: Metadata = {
   metadataBase: new URL("https://dreamlifenow.de"),
   title: {
@@ -31,7 +34,7 @@ export const metadata: Metadata = {
     "Mentoring",
     "Social Recruiting",
   ],
-  icons: { icon: "/brand/favicon.png", apple: "/brand/favicon.png" },
+  icons: { icon: `${bp}/brand/favicon.png`, apple: `${bp}/brand/favicon.png` },
   openGraph: {
     type: "website",
     locale: "de_DE",
