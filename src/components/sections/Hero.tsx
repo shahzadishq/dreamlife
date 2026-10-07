@@ -20,11 +20,11 @@ export function Hero() {
     target: sectionRef,
     offset: ["start start", "end start"],
   });
-  // Parallax: background drifts down slower than the page; content lifts gently.
+  // Parallax: only the background image drifts/scales on scroll. The content
+  // stays fully opaque (no fade) and only lifts very gently.
   const bgY = useTransform(scrollYProgress, [0, 1], ["0%", reduce ? "0%" : "22%"]);
   const bgScale = useTransform(scrollYProgress, [0, 1], [1.08, reduce ? 1.08 : 1.18]);
-  const contentY = useTransform(scrollYProgress, [0, 1], ["0%", reduce ? "0%" : "-14%"]);
-  const contentOpacity = useTransform(scrollYProgress, [0, 0.8], [1, reduce ? 1 : 0.35]);
+  const contentY = useTransform(scrollYProgress, [0, 1], ["0%", reduce ? "0%" : "-6%"]);
 
   const container: Variants = {
     hidden: {},
@@ -75,7 +75,7 @@ export function Hero() {
           variants={container}
           initial="hidden"
           animate="show"
-          style={{ y: contentY, opacity: contentOpacity }}
+          style={{ y: contentY }}
           className="max-w-3xl"
         >
           <motion.span

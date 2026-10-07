@@ -63,7 +63,7 @@ function FaqItem({
         className="grid transition-[grid-template-rows] duration-300 ease-premium"
       >
         <div className="overflow-hidden">
-          <p className="px-6 pb-6 text-[15px] leading-relaxed text-slate-body">
+          <p className="px-6 pb-6 pt-5 text-[15px] leading-relaxed text-slate-body">
             {a}
           </p>
         </div>
