@@ -72,13 +72,13 @@ export function Eligibility() {
               {VERIFICATION.meaning}
             </p>
           </div>
-          <div className="mt-auto flex items-center gap-4 rounded-2xl bg-white p-4">
+          <div className="mt-auto flex items-center gap-5 rounded-2xl bg-white p-5">
             <Image
               src={verbraucherschutz}
               alt="Vom Verbraucherschutz geprüft"
-              className="h-12 w-auto object-contain"
+              className="h-28 w-auto flex-none object-contain sm:h-32"
             />
-            <p className="text-xs font-medium text-slate-muted">
+            <p className="text-sm font-medium leading-relaxed text-slate-muted">
               Freiwillig geprüft – bestätigtes Serviceversprechen ohne
               versteckte Mängel.
             </p>

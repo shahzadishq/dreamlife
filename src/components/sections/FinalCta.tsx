@@ -3,6 +3,7 @@ import { FINAL_CTA } from "@/lib/content";
 import { Reveal } from "../ui/Reveal";
 import { ArrowRight, Check } from "../ui/Icons";
 import { GrowthChart } from "../ui/GrowthChart";
+import { PalmLeaf } from "../ui/PalmLeaf";
 import heroImg from "../../../public/brand/hero-island.jpg";
 
 const PERKS = [
@@ -25,6 +26,8 @@ export function FinalCta() {
           <div className="absolute inset-0 -z-10 bg-gradient-to-br from-ink/95 via-ink/88 to-indigo-brand/80" />
           <div className="absolute -right-10 -top-10 -z-10 h-64 w-64 rounded-full bg-lime/20 blur-[90px]" aria-hidden />
           <div className="absolute -bottom-16 -left-10 -z-10 h-64 w-64 rounded-full bg-sky/20 blur-[100px]" aria-hidden />
+          <PalmLeaf className="pointer-events-none absolute -right-6 -top-6 h-44 w-44 rotate-[20deg] text-lime/15 motion-safe:animate-float-slow" />
+          <PalmLeaf className="pointer-events-none absolute -bottom-10 -left-8 h-48 w-48 -scale-x-100 rotate-[200deg] text-sky/15 motion-safe:animate-float-slow [animation-delay:-4s]" />
 
           <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-14">
             {/* Copy + CTAs */}
@@ -46,7 +49,7 @@ export function FinalCta() {
                 ))}
               </ul>
 
-              <div className="mt-3 flex flex-col gap-3 sm:flex-row">
+              <div className="mt-3 flex flex-row">
                 <a
                   href={FINAL_CTA.primaryCta.href}
                   target="_blank"
@@ -55,14 +58,6 @@ export function FinalCta() {
                 >
                   {FINAL_CTA.primaryCta.label}
                   <ArrowRight className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
-                </a>
-                <a
-                  href={FINAL_CTA.secondaryCta.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center gap-2 rounded-full border border-white/25 bg-white/5 px-7 py-4 text-base font-semibold text-white backdrop-blur transition-all duration-300 ease-premium hover:bg-white/10"
-                >
-                  {FINAL_CTA.secondaryCta.label}
                 </a>
               </div>
             </div>

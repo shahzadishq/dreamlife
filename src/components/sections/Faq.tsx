@@ -78,7 +78,7 @@ export function Faq() {
   return (
     <Section id="faq" tone="white">
       <SectionHeading eyebrow={FAQ.eyebrow} title={FAQ.title} />
-      <Reveal className="mx-auto mt-12 flex max-w-3xl flex-col gap-3">
+      <Reveal className="mx-auto mt-12 max-w-5xl columns-1 gap-4 md:columns-2 [&>*]:mb-4 [&>*]:break-inside-avoid">
         {FAQ.items.map((it, i) => (
           <FaqItem
             key={it.q}
