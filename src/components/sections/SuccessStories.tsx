@@ -29,7 +29,7 @@ export function SuccessStories() {
   const [featured, ...rest] = SUCCESS_STORIES;
 
   return (
-    <Section id="erfolgsgeschichten" tone="white">
+    <Section id="erfolgsgeschichten" tone="white" leaf>
       <SectionHeading eyebrow={STORIES_META.eyebrow} title={STORIES_META.title} />
 
       {/* Featured story */}

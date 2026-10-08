@@ -76,7 +76,7 @@ export function Faq() {
   const [open, setOpen] = useState<number | null>(0);
 
   return (
-    <Section id="faq" tone="white">
+    <Section id="faq" tone="white" leaf>
       <SectionHeading eyebrow={FAQ.eyebrow} title={FAQ.title} />
       <Reveal className="mx-auto mt-12 max-w-5xl columns-1 gap-4 md:columns-2 [&>*]:mb-4 [&>*]:break-inside-avoid">
         {FAQ.items.map((it, i) => (
